@@ -25,18 +25,11 @@
       <div class="main-content">
 
           <ul class="category-menu nav radius p-2 bg-light">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
+            @foreach ($categories as $category)
+              <li class="nav-item">
+                <a class="nav-link " href="#">{{$category->title}}</a>
+              </li>
+            @endforeach
           </ul>
 
           <div class="sub-content">
