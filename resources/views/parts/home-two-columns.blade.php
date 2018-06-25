@@ -29,7 +29,7 @@
                     </div>
                     <div class="row">
                       <div class="col cat-date">
-                        {{$content->created_at->format('d/m/Y')}}
+                        {{$content->created_at->format('Y/m/d')}}
                       </div>
                     </div>
                   </div>
@@ -46,23 +46,27 @@
                </div>  
             </div>  
               
-              <div class="row">
-                <div class="col-2 col-md-3 col-lg-2">
-                    <img src="holder.js/50x50">
-                </div>
-                <div class="col d-flex flex-column justify-content-center">
-                  <div class="row">
-                    <div class="col cat-title">
-                      Title
+            @foreach ($mostRead as $mr)
+                
+                <div class="row mb-2">
+                  <div class="col-2 col-md-3 col-lg-2">
+                      {{-- <img src="holder.js/50x50"> --}}
+                        <img src="{{Voyager::image($mr->thumbnail('cropped50', 'images'))}}" alt="">
+                  </div>
+                  <div class="col d-flex flex-column justify-content-center">
+                    <div class="row">
+                      <div class="col cat-title">
+                        {{$mr->title}}
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col cat-date">
+                        {{$mr->created_at->format('Y/m/d')}}
+                      </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col cat-date">
-                      Date
-                    </div>
-                  </div>
                 </div>
-            </div>
+              @endforeach
           </div>              
         </div>
       </div>
