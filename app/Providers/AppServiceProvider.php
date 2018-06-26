@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer(['layouts.front'], function($view){
+        view()->composer(['layouts.front', 'pages.homepage'], function($view){
             // categories
             $view->with('categories', Category::orderBy('order', 'asc')->get());
             
