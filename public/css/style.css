@@ -20,10 +20,13 @@ a:hover {
 }
 
 .home-card {
+    height: 260px;
 }
 
 .home-card-big {
-    width: 542px;
+    width: 100%;
+    /* width: 542px; */
+    height: 536px;
 }
 
 .card-sm-title {
@@ -70,9 +73,24 @@ a:hover {
     border-bottom: 1px solid #000;
 }
 
+.category-detail {
+    min-height: 700px;
+}
+
+.content-date {
+    font-size: 18px;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.sub-two-column {
+    margin-top: 70px;
+}
+
 .footer {
     margin-top: 30px; 
+    font-size: 12px;
     padding: 10px;
-    background-color: cadetblue;
+    background-color: rgb(70, 70, 70);
     color: aliceblue;
 }
