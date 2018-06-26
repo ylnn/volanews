@@ -18,13 +18,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer(['layouts.front', 'pages.homepage'], function($view){
+        view()->composer(['layouts.front', 'pages.homepage', 'pages.content-detail'], function($view){
             // categories
             $view->with('categories', Category::orderBy('order', 'asc')->get());
             
             // contents by categories
             $view->with('contentsByCategories', Category::with(['contents' => function ($query) {
-                $query->take(2);
+                $query->take(10);
             }])->get());
 
             // most readed contents
