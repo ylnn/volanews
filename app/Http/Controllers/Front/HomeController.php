@@ -15,4 +15,15 @@ class HomeController extends Controller
     {
         return view('pages.homepage');
     } 
+
+    public function category(Category $category)
+    {
+        $contents = $category->contents()->paginate(2);
+        return view('pages.category-detail', compact('category', 'contents'));
+    }
+
+    public function content(Content $content)
+    {
+        return view('pages.content-detail', compact('content'));
+    }
 }
