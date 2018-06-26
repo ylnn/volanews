@@ -28,7 +28,7 @@
                 @endif
                 
                 <div class="col-xs-12 col-md-6 mb-3" style="">
-                        <a href="{{route('content.detail', ['id' => $mc->id, 'slug' => $mc->slug])}}">
+                        <a href="{{route('content.detail', ['id' => $mc->content->id, 'slug' => $mc->content->slug])}}">
                         <div class="card home-card" >
                         <img class="card-img-top" src="{{Voyager::image($mc->content->thumbnail('cropped270', 'images'))}}" alt="Card image cap">
                         <div class="card-body">
