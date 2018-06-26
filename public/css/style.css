@@ -82,6 +82,13 @@ a:hover {
     border-bottom: 1px solid #000;
 }
 
+.content-summary {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .category-detail {
     min-height: 700px;
 }
