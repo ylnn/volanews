@@ -19,11 +19,13 @@ class HomeController extends Controller
     public function category(Category $category)
     {
         $contents = $category->contents()->paginate(2);
-        return view('pages.category-detail', compact('category', 'contents'));
+        $title = $category->title;
+        return view('pages.category-detail', compact('category', 'contents', 'title'));
     }
 
     public function content(Content $content)
     {
-        return view('pages.content-detail', compact('content'));
+        $title = $content->title;
+        return view('pages.content-detail', compact('content', 'title'));
     }
 }
