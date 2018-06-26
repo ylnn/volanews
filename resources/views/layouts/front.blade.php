@@ -34,18 +34,11 @@
 
           <div class="sub-content">
             @yield('content')
+
+    
           </div>
 
-          <div class="row">
-            <div class="col">
-              <div class="aad-section border d-flex justify-content-center ">
-                BANNER ETC.
-              </div>
-
-            </div>
-          </div>
-
-         @include('parts.home-two-columns') 
+          
       </div>
 
     </main>
