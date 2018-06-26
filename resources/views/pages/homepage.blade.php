@@ -5,13 +5,16 @@
     @php 
         $first = $mainContents[0]->content;
     @endphp
+
+        @include('ads.adaptive', ['section' => 'section1']) 
+
     <div class="row">
         <div class="col-xs-12 col-md-12 col-lg-12 col-xl-6 mb-3">
             <div class="row">
                 <div class="col-xs-12 col-md-6 mb-3">
                         <a href="{{route('content.detail', ['id' => $first->id, 'slug' => $first->slug])}}">
                             <div class="card home-card-big" >
-                                <img class="card-img-top" src="{{Voyager::image($first->thumbnail('cropped540', 'images'))}}" alt="Card image cap">
+                                <img class="card-img-top img-fluid" src="{{Voyager::image($first->thumbnail('cropped540', 'images'))}}" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title">{{$first->title}}</h5>
                                 </div>
@@ -43,7 +46,7 @@
     </div>
     @endif
 
-    @include('ads.banner') 
+    @include('ads.adaptive', ['section' => 'section2']) 
 
     @include('parts.home-two-columns')
 
