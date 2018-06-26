@@ -2,6 +2,15 @@
     padding-top: 70px;
 }
 
+a {
+    color: rgb(99, 99, 99);
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 .category-menu a {
     color: rgb(66, 66, 66);
 }
