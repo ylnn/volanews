@@ -38,6 +38,11 @@
                 </a>
                 @endforeach
               @endforeach
+
+                {{-- SECTION 3 --}}
+                @include('ads.adaptive', ['section' => 'section3']) 
+                {{-- SECTION 3 --}}
+
             </div>              
           <div class="col-xs-12 col-md-4">
             <div class="row">
@@ -70,6 +75,10 @@
                   </div>
                 </a>
               @endforeach
+
+              {{-- SECTION 4 --}}
+              @include('ads.adaptive', ['section' => 'section4']) 
+              {{-- SECTION 4 --}}
           </div>              
         </div>
       </div>
