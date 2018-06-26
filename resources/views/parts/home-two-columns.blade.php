@@ -20,7 +20,7 @@
                   <div class="row mb-2">
                     <div class="col-5 col-sm-4 col-lg-3 ">
                         {{-- <img src="holder.js/150x100"> --}}
-                        <img src="{{Voyager::image($content->thumbnail('cropped150', 'images'))}}" alt="">
+                        <img src="{{Voyager::image($content->thumbnail('cropped150', 'images'))}}" alt="{{$content->title}}">
                     </div>
                     <div class="col-6 col-sm-8 col-lg-9 d-flex flex-column justify-content-center">
                       <div class="row">
@@ -58,7 +58,7 @@
                 <a href="{{route('content.detail', ['id' => $mr->id, 'slug' => $mr->slug])}}">
                   <div class="row mb-2">
                     <div class="col-2 col-md-3 col-lg-2">
-                          <img src="{{Voyager::image($mr->thumbnail('cropped50', 'images'))}}" alt="">
+                          <img src="{{Voyager::image($mr->thumbnail('cropped50', 'images'))}}" alt="{{$mr->title}}">
                     </div>
                     <div class="col d-flex flex-column justify-content-center">
                       <div class="row">
