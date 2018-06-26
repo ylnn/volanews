@@ -11,6 +11,10 @@ class Content extends Model
 
     protected $table = "contents";
 
+    protected $dispatchesEvents = [
+        'created' => \App\Events\ContentCreated::class,
+    ];
+
     public function category()
     {
         return $this->belongsTo('App\Category');        
