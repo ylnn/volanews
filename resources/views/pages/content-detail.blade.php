@@ -5,6 +5,7 @@
     <div class="row">
             <div class="col-md-12">
                 <h2 class="category-detail-title">{{$content->title}}</h2>
+                <div class="content-date">{{$content->updated_at->format('Y-m-d H:i:s') }}</div>
             </div>
 
             <div class="col-md-12">
@@ -26,5 +27,7 @@
             </div>
 
         </div>
+
+    @include('parts.home-two-columns')
         
 @endsection
