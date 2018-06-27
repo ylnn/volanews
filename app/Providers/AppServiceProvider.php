@@ -7,7 +7,7 @@ use App\Category;
 use App\Content;
 use App\MainContent;
 use Carbon\Carbon;
-use App\Asection;
+use App\Adsection;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,11 +28,11 @@ class AppServiceProvider extends ServiceProvider
             }])->get());
 
             // most readed contents
-            $date = Carbon::now()->subDay(1)->toDateTimeString();            
+            $date = Carbon::now()->subDay(2)->toDateTimeString();            
             $view->with('mostRead', Content::where('created_at', '>', $date)->orderBy('show', 'asc')->take(10)->get());
 
             // get ads
-            $ads = Asection::where('status', true)->get();
+            $ads = Adsection::where('status', true)->get();
             $adSections = [];
             // filter ads by sections
             for ($i=1; $i < 5; $i++) { 

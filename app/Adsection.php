@@ -5,7 +5,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Asection extends Model
+class Adsection extends Model
 {
+    protected $table = "adsections";
     
 }
