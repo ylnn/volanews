@@ -27,9 +27,19 @@ class AppServiceProvider extends ServiceProvider
                 $query->take(10);
             }])->get());
 
-            // most readed contents
-            $date = Carbon::now()->subDay(2)->toDateTimeString();            
-            $view->with('mostRead', Content::where('created_at', '>', $date)->orderBy('show', 'asc')->take(10)->get());
+            // ##### most readed contents ######
+
+            //date
+            $daysFromSettings = setting('site.most_read_past_days');
+            $date = Carbon::now()->subDay(intval($daysFromSettings))->toDateTimeString();            
+
+            //news count
+            $mostReadNewsCount = setting('site.most_read_news_count');
+
+            //get most read news 
+            $view->with('mostRead', Content::where('created_at', '>', $date)->orderBy('show', 'asc')->take(intval($mostReadNewsCount))->get());
+
+            // ##### most readed contents ######
 
             // get ads
             $ads = Adsection::where('status', true)->get();
