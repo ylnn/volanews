@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TranslationsTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
 
     /**
@@ -12,11 +12,8 @@ class TranslationsTableSeeder extends Seeder
      */
     public function run()
     {
-        
 
-        \DB::table('translations')->delete();
-        
-        
+        \DB::table('categories')->delete();
         
     }
 }
