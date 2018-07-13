@@ -16,8 +16,11 @@
                 <a href="{{route('content.detail', ['id' => $content->id, 'slug' => $content->slug])}}">
                   <div class="row mb-2">
                     <div class="col-5 col-sm-4 col-lg-3 ">
-                        {{-- <img src="holder.js/150x100"> --}}
+                      @isset($content->images)
                         <img src="{{Voyager::image($content->thumbnail('cropped150', 'images'))}}">
+                      @else
+                        <img src="holder.js/150x100" alt="">
+                      @endif
                     </div>
                     <div class="col-6 col-sm-8 col-lg-9 d-flex flex-column justify-content-center">
                       <div class="row">
