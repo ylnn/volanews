@@ -28,7 +28,11 @@
                   <div class="row mb-2">
                     <div class="col-5 col-sm-4 col-lg-2">
                         {{-- <img src="holder.js/150x100"> --}}
+                        @isset($cc->images)
                         <img src="{{Voyager::image($cc->thumbnail('cropped150', 'images'))}}" alt="{{$cc->title}}">
+                        @else
+                        <img src="holder.js/150x100" alt="">
+                        @endif
                     </div>
                     <div class="col-6 col-sm-8 col-lg-9 d-flex flex-column justify-content-center">
                       <div class="row">
