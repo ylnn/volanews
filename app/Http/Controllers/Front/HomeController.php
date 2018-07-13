@@ -18,7 +18,7 @@ class HomeController extends Controller
 
     public function category(Category $category)
     {
-        $contents = $category->contents()->paginate(2);
+        $contents = $category->contents()->paginate(10);
         $title = $category->title;
         return view('pages.category-detail', compact('category', 'contents', 'title'));
     }
